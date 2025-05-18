@@ -5,7 +5,7 @@ jobs:
     steps:
       # ... checkout and install dependencies
       - name: Export notebook
-        run: marimo export html-wasm notebook.py -o output_dir --mode run
+        run: uv run marimo export html-wasm notebook.py -o output_dir --mode run
  
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
